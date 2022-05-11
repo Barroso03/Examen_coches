@@ -99,11 +99,16 @@ def guardar_navegacion(navegacion):
     navegacion.to_csv("navegacion_filtrada.csv", sep = ";")
 guardar_navegacion(filtrar_url(dataset_navegacion()))
 
-def borrar_repetidos(navegacion):
-    navegacion = pd.read_csv('navegacion_filtrada.csv')
-    navegacion = navegacion.drop_duplicates(subset = ['id_user1','gclid1','uuid1'], keep = 'first')
+# haz una funcion que  si en la columna id_user1 es 0, mira la columna gclid1,si es igual que en otra linea de la columna gclid1, miras la columna uuid1 y si es igual,borras la linea
+# si la columna id_user1 se repite se borra toda la linea, si no, segue con la siguiente linea
+def filtrar_navegacion(navegacion):
+    navegacion = navegacion.drop_duplicates(subset = ['id_user1'], keep = 'first')
+    navegacion = navegacion.drop_duplicates(subset = ['gclid1'], keep = 'first')
+    navegacion = navegacion.drop_duplicates(subset = ['uuid1'], keep = 'first')
     return navegacion
-print(borrar_repetidos(dataset_navegacion()))
+print(filtrar_navegacion(dataset_navegacion()))
+
+
 
 
 
