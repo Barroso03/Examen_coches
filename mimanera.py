@@ -170,6 +170,7 @@ conversion_por_gclid= Conversiones(navegacion_final['gclid1'], conversion_final[
 union = {'Campaña':navegacion_final['Campaña'], 'Adgroup':navegacion_final['Adgroup'], 'Advertisement':navegacion_final['Advertisement'], 'Site_link':navegacion_final['Site_link'], 'id_user_navegacion':navegacion_final['id_user1'], 'gclid_navegacion':navegacion_final['gclid1']}
 union_final= pd.DataFrame(union)
 csv_union= union_final.assign(conversion_id=conversion_por_id, conversion_gclid=conversion_por_gclid)
+csv_union.to_csv("union_final.csv", sep = ";")
 
 
 
