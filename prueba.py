@@ -196,7 +196,7 @@ def grafico_sectores_call_form():
     plt.axis('equal')
     plt.show()
     # salva el grafico en un archivo .png y meteo en una carpeta llamada graficos
-    plt.savefig('graficos/grafico_sectores_call_form.png')
+   
 
 grafico_sectores_call_form()
 
@@ -217,7 +217,7 @@ def grafico_porcentaje_recurrentes():
     plt.axis('equal')
     plt.show()
     # salva el grafico en un archivo .png y meteo en una carpeta llamada graficos
-    plt.savefig('graficos/grafico_porcentaje_recurrentes.png')
+   
 grafico_porcentaje_recurrentes()
 
 #5.7:Gráfico de coche mas visitado
@@ -241,7 +241,7 @@ def grafico_coche_mas_visitado():
    
     plt.show()
     # salva el grafico en un archivo .png y meteo en una carpeta llamada graficos
-    plt.savefig('graficos/grafico_coche_mas_visitado.png')
+   
     
 grafico_coche_mas_visitado()
 
